@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ProCode</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>ProCode</h1>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#cursos">Cursos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="auth-buttons">
+  <div id="auth-logged-out">
+    <button id="btn-login" onclick="location.href='login.html'">Iniciar Sesión</button>
+    <button id="btn-register" onclick="location.href='registro.html'">Registrarse</button>
+  </div>
+
+  <div id="auth-logged-in" style="display: none;">
+    <span id="user-email" style="color: white; margin-right: 10px;"></span>
+    <button id="logoutBtn">Cerrar sesión</button>
+  </div>
+</div>
+
+
+
+</div>
+
+
+  </header>
+
+  <section id="inicio" class="hero">
+<h2 class="frase-ola">
+  <span style="--i:0">A</span>
+  <span style="--i:1">p</span>
+  <span style="--i:2">r</span>
+  <span style="--i:3">e</span>
+  <span style="--i:4">n</span>
+  <span style="--i:5">d</span>
+  <span style="--i:6">e</span>
+  <span style="--i:7"> </span>
+  <span style="--i:8">a</span>
+  <span style="--i:9"> </span>
+  <span style="--i:10">p</span>
+  <span style="--i:11">r</span>
+  <span style="--i:12">o</span>
+  <span style="--i:13">g</span>
+  <span style="--i:14">r</span>
+  <span style="--i:15">a</span>
+  <span style="--i:16">m</span>
+  <span style="--i:17">a</span>
+  <span style="--i:18">r</span>
+  <span style="--i:19"> </span>
+  <span style="--i:20">j</span>
+  <span style="--i:21">u</span>
+  <span style="--i:22">g</span>
+  <span style="--i:23">a</span>
+  <span style="--i:24">n</span>
+  <span style="--i:25">d</span>
+  <span style="--i:26">o</span>
+  <span style="--i:46">.</span>
+</h2>
+
+    <p>Clases para niños y jóvenes. ¡Empieza hoy!</p>
+  </section>
+
+  <section id="cursos">
+  <h2>Nuestros Cursos</h2>
+
+  <div class="curso">
+    <h3>Introducción a Python</h3>
+    <p>Ideal para principiantes. Aprende a crear tus primeros programas.</p>
+    <a href="curso-python.html" class="btn-curso">Ver más</a>
+  </div>
+
+  <div class="curso">
+    <h3>Diseño Web con HTML y CSS</h3>
+    <p>Crea tus propias páginas web desde cero.</p>
+    <a href="curso-web.html" class="btn-curso">Ver más</a>
+  </div>
+
+  <div class="curso">
+    <h3>JavaScript para Principiantes</h3>
+    <p>Haz tus sitios web interactivos con código real.</p>
+    <a href="curso-js.html" class="btn-curso">Ver más</a>
+  </div>
+</section>
+
+
+  <section id="contacto">
+    <h2>Contáctanos</h2>
+    <form action="https://formspree.io/f/mwpqbqbo" method="POST">
+    <h2>Nombre:</h2>
+  <input type="text" name="nombre" placeholder="Tu nombre" required>
+    <h2>Correo:</h2>
+  <input type="email" name="email" placeholder="Tu correo" required>
+    <h2>Mensaje:</h2>
+  <textarea name="mensaje" placeholder="Tu mensaje" required></textarea>
+    <h2>Número:</h2>
+    <input type="number" name="telefono" placeholder="ejem: +51999999" required>
+<button type="submit" class="btn-enviar">Enviar</button>
+</form>
+
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Academia ProCode. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Modal de Registro -->
+<div id="modal-register" class="modal">
+  <div class="modal-content">
+    <h2>Crear cuenta</h2>
+    <input type="email" id="register-email" placeholder="Correo electrónico" required>
+    <input type="password" id="register-password" placeholder="Contraseña" required>
+    <button id="register-submit">Registrarse</button>
+    <button class="close-modal">Cerrar</button>
+  </div>
+</div>
+
+<!-- Modal de Login -->
+<div id="modal-login" class="modal">
+  <div class="modal-content">
+    <h2>Iniciar sesión</h2>
+    <input type="email" id="login-email" placeholder="Correo electrónico" required>
+    <input type="password" id="login-password" placeholder="Contraseña" required>
+    <button id="login-submit">Entrar</button>
+    <button class="close-modal">Cerrar</button>
+  </div>
+</div>
+
+
+<script type="module" src="script.js"></script>
+
+</body>
+</html>
