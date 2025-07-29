@@ -105,6 +105,36 @@ document.addEventListener("DOMContentLoaded", () => {
   if (logoutBtn) {
     logoutBtn.addEventListener("click", cerrarSesion);
   }
+    const contactForm = document.getElementById("contactForm");
+
+  if (contactForm) {
+    contactForm.addEventListener("submit", function (e) {
+      e.preventDefault(); // Previene el envío normal
+
+      const formData = new FormData(contactForm);
+
+      fetch(contactForm.action, {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      })
+        .then((response) => {
+          if (response.ok) {
+            alert("¡Gracias por contactarnos! Te responderemos pronto.");
+            contactForm.reset(); // Limpia los campos del formulario
+          } else {
+            alert("Hubo un error al enviar el mensaje. Inténtalo de nuevo.");
+          }
+        })
+        .catch((error) => {
+          alert("Ocurrió un error al enviar el formulario.");
+          console.error("Error:", error);
+        });
+    });
+  }
+
 
   // Mostrar info del usuario conectado
 onAuthStateChanged(auth, (user) => {
