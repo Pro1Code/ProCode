@@ -4,9 +4,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="google-site-verification" content="foTzlidMAr2Jc8a5x282J7thPha5p7qtKUDFi7z8Vkg" />
-  <title>ProCode</title>
+  <!-- SEO básico -->
+  <title>ProCode - Clases de Programación Online</title>
+  <meta name="description" content="Aprende programación desde cero o mejora tus habilidades con nuestros cursos online. ProCode ofrece clases prácticas de HTML, CSS, JavaScript y más.">
+  <meta name="keywords" content="programación, cursos online, HTML, CSS, JavaScript, aprender a programar, clases de programación">
+  <meta name="author" content="ProCode">
+
+  <!-- Open Graph para redes sociales -->
+  <meta property="og:title" content="ProCode - Clases de Programación Online">
+  <meta property="og:description" content="Aprende programación desde cero o mejora tus habilidades con nuestros cursos online.">
+  <meta property="og:image" content="https://pro1code.github.io/ProCode/imagen-preview.jpg">
+  <meta property="og:url" content="https://pro1code.github.io/ProCode/">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ProCode - Clases de Programación Online">
+  <meta name="twitter:description" content="Aprende programación desde cero o mejora tus habilidades con nuestros cursos online.">
+  <meta name="twitter:image" content="https://pro1code.github.io/ProCode/imagen-preview.jpg">
+
+  <!-- Icono -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- Tu CSS -->
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <header>
     <h1>ProCode</h1>
@@ -16,6 +39,7 @@
       <a href="#contacto">Contacto</a>
     </nav>
     <div class="auth-buttons">
+    <button id="dark-mode-toggle">🌙 Modo Oscuro</button>
   <div id="auth-logged-out">
     <button id="btn-login" onclick="location.href='login.html'">Iniciar Sesión</button>
     <button id="btn-register" onclick="location.href='registro.html'">Registrarse</button>
@@ -133,10 +157,13 @@
     <button class="close-modal">Cerrar</button>
   </div>
 </div>
+<div id="mensaje-flotante" class="oculto">Mensaje enviado con éxito</div>
+
 
 
 <script type="module" src="script.js"></script>
 
 </body>
 </html>
+
 
